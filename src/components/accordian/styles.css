@@ -4,12 +4,14 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .accordion {
   width: 500px;
 }
 .item {
-  background: #614101;
+  background: #a32c23;
   margin-bottom: 10px;
   padding: 10px 20px;
 }
