@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { BsArrowLeftCircleFill } from "react-icons/bs";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import "./styles.css";
 
 export default function ImageSlider({ url, limit }) {
   const [images, setImages] = useState([]);
@@ -38,5 +39,26 @@ export default function ImageSlider({ url, limit }) {
     return <div>Error occured ! {errorMsg}</div>;
   }
 
-  return <div className="container"></div>;
+  return (
+    <div className="container">
+      <BsArrowLeftCircleFill className="arrow arrow-left" />
+      {images && images.length
+        ? images.map((imageItem) => (
+            <img
+              key={imageItem.id}
+              alt={imageItem.download_url}
+              src={imageItem.download_url}
+              className="current-image"
+            />
+          ))
+        : null}
+
+      <BsArrowRightCircleFill className="arrow arrow-right" />
+      <span className="circle-indicators">
+        {images && images.length
+          ? images.map((_, index) => <button key={index} className="current-indicator"></button>)
+          : null}
+      </span>
+    </div>
+  );
 }
