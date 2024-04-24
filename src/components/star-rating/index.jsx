@@ -26,7 +26,7 @@ export default function StarRating({ noOfStars = 5 }) {
             className={index <= (hover || rating) ? "active" : "inactive"}
             onClick={() => handleClick(index)}
             onMouseMove={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
+            onMouseLeave={() => handleMouseLeave()}
             size={40}
           />
         );
