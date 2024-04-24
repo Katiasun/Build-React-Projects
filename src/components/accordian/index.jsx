@@ -1,6 +1,7 @@
 //accordian selection
 // multiple selection
 import { useState } from "react";
+import "./styles.css";
 import data from "./data";
 
 export default function Accordian() {
