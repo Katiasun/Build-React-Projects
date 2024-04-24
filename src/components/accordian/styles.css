@@ -7,6 +7,14 @@
   flex-direction: column;
   gap: 20px;
 }
+.wrapper button {
+  padding: 10px 20px;
+  background: rgb(14, 64, 104);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
 .accordion {
   width: 500px;
 }
