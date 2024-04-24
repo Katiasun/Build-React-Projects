@@ -13,9 +13,12 @@ export default function Accordian() {
     setSelected(getCurrentId === selected ? null : getCurrentId);
   }
 
+  function handleSingleSelectionMultiple(getCurrentId) {}
   return (
     <div className="wrapper">
-      <button>Enable Multi Selection</button>
+      <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
+        Enable Multi Selection
+      </button>
       <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
