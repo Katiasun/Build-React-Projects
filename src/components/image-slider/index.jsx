@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BsArrowLeftCircleFill } from "react-icons/bs";
 
 export default function ImageSlider({ url, limit }) {
   const [images, setImages] = useState([]);
@@ -10,7 +11,7 @@ export default function ImageSlider({ url, limit }) {
     try {
       setLoading(true);
 
-      const response = await fetch(getUrl);
+      const response = await fetch(`${getUrl} ? page=1&limit=${limit}`);
       const data = await response.json();
 
       if (data) {
