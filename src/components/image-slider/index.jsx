@@ -29,5 +29,13 @@ export default function ImageSlider({ url, limit }) {
     }
   }, [url]);
 
+  if (loading) {
+    return <div>Loading data ! Please wait</div>;
+  }
+
+  if (errorMsg !== null) {
+    return <div>Error occured ! {errorMsg}</div>;
+  }
+
   return <div className="container"></div>;
 }
