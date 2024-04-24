@@ -4,30 +4,30 @@ export default function ImageSlider({ url, limit }) {
   const [images, setImages] = useState([]);
   const [currentSlider, setCurrentSlider] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-    async function fetchImages(getUrl) {
-        try {
-            setLoading(true)
+  async function fetchImages(getUrl) {
+    try {
+      setLoading(true);
 
-            const response = await fetch(getUrl);
-            const data = await response.json();
+      const response = await fetch(getUrl);
+      const data = await response.json();
 
-            if (data) {
-                setImages(data)
-                setLoading(false)
-            }
-        } catch (e) {
-            setErrorMsg(e.message);
-            setLoading(false);
-        }
+      if (data) {
+        setImages(data);
+        setLoading(false);
+      }
+    } catch (e) {
+      setErrorMsg(e.message);
+      setLoading(false);
     }
+  }
 
-    useEffect(() => {
-        if (url !== "") {
-            fetchImages(url);
-        }
-    }, [url])
+  useEffect(() => {
+    if (url !== "") {
+      fetchImages(url);
+    }
+  }, [url]);
 
-    return()
+  return <div className="container"></div>;
 }
