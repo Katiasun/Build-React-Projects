@@ -6,13 +6,17 @@ import data from "./data";
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
 
+  function handleSingleSelection(getCurrentId) {
+    console.log(getCurrentId);
+  }
+
   return (
     <div className="wrapper">
       <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div className="item">
-              <div className="title">
+              <div onClick={() => handleSingleSelection(data.id)} className="title">
                 <h3>{dataItem.question}</h3>
                 <span>+</span>
               </div>
