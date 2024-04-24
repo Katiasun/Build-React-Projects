@@ -1,6 +1,7 @@
 import "./App.css";
 import Accordian from "./components/accordian";
 import StarRating from "./components/star-rating";
+import ImageSlider from "./components/image-slider";
 function App() {
   return (
     <div className="App">
@@ -8,7 +9,10 @@ function App() {
       {/* <Accordian /> */}
 
       {/* {StarRating component} */}
-      <StarRating noOfStars={10} />
+      {/* <StarRating noOfStars={7} /> */}
+
+      {/* ImageSlider component*/}
+      <ImageSlider url={"https://picsum.photos/v2/list"} limit={"10"} />
     </div>
   );
 }
