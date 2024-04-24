@@ -6,6 +6,7 @@ import data from "./data";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
+  const [enableMultiSelection, setEnableMultiSelection] = useState(false);
 
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
