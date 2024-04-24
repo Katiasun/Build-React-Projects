@@ -5,10 +5,10 @@ function App() {
   return (
     <div className="App">
       {/* {Accordian component} */}
-      <Accordian />
+      {/* <Accordian /> */}
 
       {/* {StarRating component} */}
-      <StarRating />
+      <StarRating noOfStars={10} />
     </div>
   );
 }
