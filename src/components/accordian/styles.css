@@ -4,22 +4,32 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrapper button {
+  padding: 10px 20px;
+  background: rgb(14, 64, 104);
+  color: rgb(235, 232, 63);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .accordion {
   width: 500px;
 }
 .item {
-  background: #614101;
+  background: rgb(14, 64, 104);
   margin-bottom: 10px;
   padding: 10px 20px;
 }
 .title {
-  color: wheat;
+  color: rgb(235, 232, 63);
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 .content {
-  color: wheat;
+  color: rgb(235, 232, 63);
 }
