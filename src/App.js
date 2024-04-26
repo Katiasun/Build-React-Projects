@@ -12,7 +12,7 @@ function App() {
       {/* <StarRating noOfStars={7} /> */}
 
       {/* ImageSlider component*/}
-      <ImageSlider url={"https://picsum.photos/v2/list"} limit={"10"} />
+      <ImageSlider url={"https://picsum.photos/v2/list"} limit={"10"} page={"1"} />
     </div>
   );
 }
