@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "./styles.css";
 
-export default function ImageSlider({ url, limit }) {
+export default function ImageSlider({ url, limit = 5, page = 1 }) {
   const [images, setImages] = useState([]);
   const [currentSlider, setCurrentSlider] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -12,7 +12,7 @@ export default function ImageSlider({ url, limit }) {
     try {
       setLoading(true);
 
-      const response = await fetch(`${getUrl} ? page=1&limit=${limit}`);
+      const response = await fetch(`${getUrl} ? page=${page}&limit=${limit}`);
       const data = await response.json();
 
       if (data) {
